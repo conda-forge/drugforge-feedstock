@@ -72,7 +72,6 @@ outputs:
           imports:
             - drugforge.data
           pip_check: False
-          python_version: ${{ python_min }}.*
   - package: 
       name: drugforge-alchemy
     build:
@@ -123,7 +122,6 @@ outputs:
           imports:
             - drugforge.alchemy
           pip_check: False
-          python_version: ${{ python_min }}.*
   - package: 
       name: drugforge-cli
     build:
@@ -156,7 +154,6 @@ outputs:
           imports:
             - drugforge.cli
           pip_check: False
-          python_version: ${{ python_min }}.*
   - package: 
       name: drugforge-dataviz
     build:
@@ -197,7 +194,6 @@ outputs:
           imports:
             - drugforge.dataviz
           pip_check: False
-          python_version: ${{ python_min }}.*
   - package: 
       name: drugforge-docking
     build:
@@ -233,7 +229,6 @@ outputs:
           imports:
             - drugforge.docking
           pip_check: False
-          python_version: ${{ python_min }}.*
   - package: 
       name: drugforge-ml
     build:
@@ -278,7 +273,6 @@ outputs:
           imports:
             - drugforge.ml
           pip_check: False
-          python_version: ${{ python_min }}.*
   - package: 
       name: drugforge-modeling
     build:
@@ -311,7 +305,6 @@ outputs:
           imports:
             - drugforge.modeling
           pip_check: False
-          python_version: ${{ python_min }}.*
   - package: 
       name: drugforge-simulation
     build:
@@ -348,7 +341,6 @@ outputs:
           imports:
             - drugforge.simulation
           pip_check: False
-          python_version: ${{ python_min }}.*
   - package: 
       name: drugforge-spectrum
     build:
@@ -384,7 +376,6 @@ outputs:
           imports:
             - drugforge.spectrum
           pip_check: False
-          python_version: ${{ python_min }}.*
   - package: 
       name: drugforge-workflows
     build:
@@ -425,7 +416,6 @@ outputs:
           imports:
             - drugforge.workflows
           pip_check: False
-          python_version: ${{ python_min }}.*
   - package: 
       name: drugforge
     build:
@@ -470,7 +460,6 @@ outputs:
             - drugforge.spectrum
             - drugforge.workflows
           pip_check: False
-          python_version: ${{ python_min }}.*
 about:
   homepage: https://drugforge.com
   summary: 'Toolkit for open antiviral drug discovery by the Choderalab (formerly ASAP)'
