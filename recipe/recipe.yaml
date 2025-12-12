@@ -14,6 +14,7 @@ source:
 
 build:
   number: 0
+  noarch: python
 
 outputs:
   - package: 
@@ -21,8 +22,6 @@ outputs:
     build:
       number: ${{ number }}
       script: python -m pip install ./drugforge-data -vv --no-deps
-      skip:
-        - win
     requirements:
       host:
         - pip
@@ -55,9 +54,6 @@ outputs:
         - rich <14.1.0
         - sigfig
         - typing-extensions
-        - if: linux
-          then:
-            - dask-cuda
     tests:
       # Uncomment when openeye dep is fixed
       #- script:
@@ -76,14 +72,11 @@ outputs:
           imports:
             - drugforge.data
           pip_check: False
-          python_version: ${{ python_min }}.*
   - package: 
       name: drugforge-alchemy
     build:
       number: ${{ number }}
       script: python -m pip install ./drugforge-alchemy -vv --no-deps
-      skip:
-        - win
     requirements:
       host:
         - pip
@@ -129,14 +122,11 @@ outputs:
           imports:
             - drugforge.alchemy
           pip_check: False
-          python_version: ${{ python_min }}.*
   - package: 
       name: drugforge-cli
     build:
       number: ${{ number }}
       script: python -m pip install ./drugforge-cli -vv --no-deps
-      skip:
-        - win
     requirements:
       host:
         - pip
@@ -164,14 +154,11 @@ outputs:
           imports:
             - drugforge.cli
           pip_check: False
-          python_version: ${{ python_min }}.*
   - package: 
       name: drugforge-dataviz
     build:
       number: ${{ number }}
       script: python -m pip install ./drugforge-dataviz -vv --no-deps
-      skip:
-        - win
     requirements:
       host:
         - pip
@@ -207,14 +194,11 @@ outputs:
           imports:
             - drugforge.dataviz
           pip_check: False
-          python_version: ${{ python_min }}.*
   - package: 
       name: drugforge-docking
     build:
       number: ${{ number }}
       script: python -m pip install ./drugforge-docking -vv --no-deps
-      skip:
-        - win
     requirements:
       host:
         - pip
@@ -245,14 +229,11 @@ outputs:
           imports:
             - drugforge.docking
           pip_check: False
-          python_version: ${{ python_min }}.*
   - package: 
       name: drugforge-ml
     build:
       number: ${{ number }}
       script: python -m pip install ./drugforge-ml -vv --no-deps
-      skip:
-        - win
     requirements:
       host:
         - pip
@@ -292,14 +273,11 @@ outputs:
           imports:
             - drugforge.ml
           pip_check: False
-          python_version: ${{ python_min }}.*
   - package: 
       name: drugforge-modeling
     build:
       number: ${{ number }}
       script: python -m pip install ./drugforge-modeling -vv --no-deps
-      skip:
-        - win
     requirements:
       host:
         - pip
@@ -327,14 +305,11 @@ outputs:
           imports:
             - drugforge.modeling
           pip_check: False
-          python_version: ${{ python_min }}.*
   - package: 
       name: drugforge-simulation
     build:
       number: ${{ number }}
       script: python -m pip install ./drugforge-simulation -vv --no-deps
-      skip:
-        - win
     requirements:
       host:
         - pip
@@ -366,14 +341,11 @@ outputs:
           imports:
             - drugforge.simulation
           pip_check: False
-          python_version: ${{ python_min }}.*
   - package: 
       name: drugforge-spectrum
     build:
       number: ${{ number }}
       script: python -m pip install ./drugforge-spectrum -vv --no-deps
-      skip:
-        - win
     requirements:
       host:
         - pip
@@ -404,14 +376,11 @@ outputs:
           imports:
             - drugforge.spectrum
           pip_check: False
-          python_version: ${{ python_min }}.*
   - package: 
       name: drugforge-workflows
     build:
       number: ${{ number }}
       script: python -m pip install ./drugforge-workflows -vv --no-deps
-      skip:
-        - win
     requirements:
       host:
         - pip
@@ -447,13 +416,10 @@ outputs:
           imports:
             - drugforge.workflows
           pip_check: False
-          python_version: ${{ python_min }}.*
   - package: 
       name: drugforge
     build:
       number: ${{ number }}
-      skip:
-        - win
     requirements:
       run:
         - python >=${{ python_min }}
@@ -494,7 +460,6 @@ outputs:
             - drugforge.spectrum
             - drugforge.workflows
           pip_check: False
-          python_version: ${{ python_min }}.*
 about:
   homepage: https://drugforge.com
   summary: 'Toolkit for open antiviral drug discovery by the Choderalab (formerly ASAP)'
