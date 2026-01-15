@@ -1,6 +1,6 @@
 context:
   name: drugforge
-  version: "0.7.0"
+  version: "0.7.1"
   number: 0
   python_min: "3.11"
 
@@ -10,14 +10,14 @@ recipe:
 
 source:
   url: https://github.com/choderalab/${{ name }}/archive/refs/tags/${{ version }}.tar.gz
-  sha256: 20d72d9b3ad649039b6d37997a227eaa02e9e7da20c35f1ccb5caedd9c22c36d
+  sha256: 7e3f9141cd3cfdb535b8267ec982aa6cd8f5e35dbd80c3ebdf2c964e1756ebf6
 
 build:
   number: 0
   noarch: python
 
 outputs:
-  - package: 
+  - package:
       name: drugforge-data
     build:
       number: ${{ number }}
@@ -48,7 +48,7 @@ outputs:
         - pydantic >=2.0.0a0
         - pydantic-settings
         - pymol-open-source
-        - pyyaml  
+        - pyyaml
         - rdkit
         - requests
         - rich <14.1.0
@@ -71,8 +71,8 @@ outputs:
       - python:
           imports:
             - drugforge.data
-          pip_check: False
-  - package: 
+          pip_check: false
+  - package:
       name: drugforge-alchemy
     build:
       number: ${{ number }}
@@ -121,8 +121,8 @@ outputs:
       - python:
           imports:
             - drugforge.alchemy
-          pip_check: False
-  - package: 
+          pip_check: false
+  - package:
       name: drugforge-cli
     build:
       number: ${{ number }}
@@ -153,8 +153,8 @@ outputs:
       - python:
           imports:
             - drugforge.cli
-          pip_check: False
-  - package: 
+          pip_check: false
+  - package:
       name: drugforge-dataviz
     build:
       number: ${{ number }}
@@ -193,8 +193,8 @@ outputs:
       - python:
           imports:
             - drugforge.dataviz
-          pip_check: False
-  - package: 
+          pip_check: false
+  - package:
       name: drugforge-docking
     build:
       number: ${{ number }}
@@ -228,8 +228,8 @@ outputs:
       - python:
           imports:
             - drugforge.docking
-          pip_check: False
-  - package: 
+          pip_check: false
+  - package:
       name: drugforge-ml
     build:
       number: ${{ number }}
@@ -272,8 +272,8 @@ outputs:
       - python:
           imports:
             - drugforge.ml
-          pip_check: False
-  - package: 
+          pip_check: false
+  - package:
       name: drugforge-modeling
     build:
       number: ${{ number }}
@@ -304,8 +304,8 @@ outputs:
       - python:
           imports:
             - drugforge.modeling
-          pip_check: False
-  - package: 
+          pip_check: false
+  - package:
       name: drugforge-simulation
     build:
       number: ${{ number }}
@@ -340,8 +340,8 @@ outputs:
       - python:
           imports:
             - drugforge.simulation
-          pip_check: False
-  - package: 
+          pip_check: false
+  - package:
       name: drugforge-spectrum
     build:
       number: ${{ number }}
@@ -375,8 +375,8 @@ outputs:
       - python:
           imports:
             - drugforge.spectrum
-          pip_check: False
-  - package: 
+          pip_check: false
+  - package:
       name: drugforge-workflows
     build:
       number: ${{ number }}
@@ -415,8 +415,8 @@ outputs:
       - python:
           imports:
             - drugforge.workflows
-          pip_check: False
-  - package: 
+          pip_check: false
+  - package:
       name: drugforge
     build:
       number: ${{ number }}
@@ -459,7 +459,7 @@ outputs:
             - drugforge.simulation
             - drugforge.spectrum
             - drugforge.workflows
-          pip_check: False
+          pip_check: false
 about:
   homepage: https://drugforge.com
   summary: 'Toolkit for open antiviral drug discovery by the Choderalab (formerly ASAP)'
@@ -477,5 +477,5 @@ about:
 extra:
   recipe-maintainers:
     - mikemhenry
-    - ijpulidos 
+    - ijpulidos
   feedstock-name: drugforge
