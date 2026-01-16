@@ -323,7 +323,7 @@ outputs:
         - python >=${{ python_min }}
         - ${{ pin_subpackage('drugforge-data', exact=True) }}
         - openff-forcefields >=2024.04.0
-        - openff-toolkit-base >=0.17
+        - openff-toolkit-base
         - openfe ~=1.0
         - openmm
     tests:
@@ -360,7 +360,7 @@ outputs:
         - ${{ pin_subpackage('drugforge-data', exact=True) }}
         - ${{ pin_subpackage('drugforge-docking', exact=True) }}
         - ${{ pin_subpackage('drugforge-simulation', exact=True) }}
-        - openff-toolkit-base >=0.17
+        - openff-toolkit-base
         - vina
     tests:
       # Uncomment when openeye dep is fixed
