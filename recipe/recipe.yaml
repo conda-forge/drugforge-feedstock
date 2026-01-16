@@ -136,6 +136,7 @@ outputs:
       run:
         - python >=${{ python_min }}
         - ${{ pin_subpackage('drugforge-data', exact=True) }}
+        - click
     tests:
       # Uncomment when openeye dep is fixed
       #- script:
@@ -175,6 +176,7 @@ outputs:
         - mdtraj
         - multimethod
         - pillow  # This is the correct package name for PIL
+        - plip ~=3.0.0
         - pygifsicle
     tests:
       # Uncomment when openeye dep is fixed
@@ -211,6 +213,7 @@ outputs:
         - ${{ pin_subpackage('drugforge-dataviz', exact=True) }}
         - ${{ pin_subpackage('drugforge-ml', exact=True) }}
         - ${{ pin_subpackage('drugforge-modeling', exact=True) }}
+        - plip ~=3.0.0
     tests:
       # Uncomment when openeye dep is fixed
       #- script:
@@ -320,7 +323,7 @@ outputs:
         - python >=${{ python_min }}
         - ${{ pin_subpackage('drugforge-data', exact=True) }}
         - openff-forcefields >=2024.04.0
-        - openff-toolkit
+        - openff-toolkit-base >=0.17
         - openfe ~=1.0
         - openmm
     tests:
@@ -357,6 +360,7 @@ outputs:
         - ${{ pin_subpackage('drugforge-data', exact=True) }}
         - ${{ pin_subpackage('drugforge-docking', exact=True) }}
         - ${{ pin_subpackage('drugforge-simulation', exact=True) }}
+        - openff-toolkit-base >=0.17
         - vina
     tests:
       # Uncomment when openeye dep is fixed
