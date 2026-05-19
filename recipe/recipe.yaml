@@ -1,6 +1,6 @@
 context:
   name: drugforge
-  version: "0.7.2"
+  version: "0.8.0"
   number: 0
   python_min: "3.11"
 
@@ -10,7 +10,7 @@ recipe:
 
 source:
   url: https://github.com/choderalab/${{ name }}/archive/refs/tags/${{ version }}.tar.gz
-  sha256: 20595b9c10ab572c517d21e85349ddb55a81419a2b7607c1fc1b1e985a51b6bc
+  sha256: da101c508e1aa29df1c43bddd714c4382415d3b3f60373387d7b04517b809c6c
 
 build:
   number: 0
