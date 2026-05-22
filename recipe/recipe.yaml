@@ -88,7 +88,7 @@ outputs:
         - ${{ pin_subpackage('drugforge-data', exact=True) }}
         - alchemiscale-client
         - bokeh
-        - cinnabar ~=0.4.1
+        - cinnabar >=0.5.0
         - distributed
         - gufe ~=1.4.0
         - lomap2
