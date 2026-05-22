@@ -135,13 +135,13 @@ outputs:
         - versioningit
       run:
         - python >=${{ python_min }}
-        - ${{ pin_subpackage('drugforge-alchemy', exact=True) }}
+        #- ${{ pin_subpackage('drugforge-alchemy', exact=True) }}
         - ${{ pin_subpackage('drugforge-data', exact=True) }}
-        - ${{ pin_subpackage('drugforge-dataviz', exact=True) }}
-        - ${{ pin_subpackage('drugforge-docking', exact=True) }}
-        - ${{ pin_subpackage('drugforge-modeling', exact=True) }}
-        - ${{ pin_subpackage('drugforge-simulation', exact=True) }}
-        - ${{ pin_subpackage('drugforge-spectrum', exact=True) }}
+        #- ${{ pin_subpackage('drugforge-dataviz', exact=True) }}
+        #- ${{ pin_subpackage('drugforge-docking', exact=True) }}
+        #- ${{ pin_subpackage('drugforge-modeling', exact=True) }}
+        #- ${{ pin_subpackage('drugforge-simulation', exact=True) }}
+        #- ${{ pin_subpackage('drugforge-spectrum', exact=True) }}
         - click
     tests:
       # Uncomment when openeye dep is fixed
@@ -175,10 +175,10 @@ outputs:
       run:
         - python >=${{ python_min }}
         - ${{ pin_subpackage('drugforge-data', exact=True) }}
-        - ${{ pin_subpackage('drugforge-docking', exact=True) }}
-        - ${{ pin_subpackage('drugforge-modeling', exact=True) }}
-        - ${{ pin_subpackage('drugforge-simulation', exact=True) }}
-        - ${{ pin_subpackage('drugforge-spectrum', exact=True) }}
+        #- ${{ pin_subpackage('drugforge-docking', exact=True) }}
+        #- ${{ pin_subpackage('drugforge-modeling', exact=True) }}
+        #- ${{ pin_subpackage('drugforge-simulation', exact=True) }}
+        #- ${{ pin_subpackage('drugforge-spectrum', exact=True) }}
         - airium
         - imageio
         - logomaker
@@ -257,7 +257,7 @@ outputs:
         - python >=${{ python_min }}
         - ${{ pin_subpackage('drugforge-alchemy', exact=True) }}
         - ${{ pin_subpackage('drugforge-data', exact=True) }}
-        - ${{ pin_subpackage('drugforge-modeling', exact=True) }}
+        #- ${{ pin_subpackage('drugforge-modeling', exact=True) }}
         - dgl<=2.0.0
         - dgllife
         - mtenn >=0.6.3
